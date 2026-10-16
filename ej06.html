@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 - Diseño de Caja</title>
+
+    <style>
+        body {
+            background: linear-gradient( lightblue 60%,#d45b91  );
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #d45b91;
+        }
+
+        .caja {
+            background-color: #ffffff;
+            border: 3px solid #d45b91;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 30px auto;
+            box-shadow: 0 4px 10px #88888855;
+        }
+
+        #texto {
+            color: #d45b91;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        input[type="range"] {
+            width: 80%;
+            accent-color: #d45b91;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #f8bbd0;
+            color: #333333;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #ec80ad;
+            color: white;
+        }
+        html, body{
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Diseño de Caja con Slider</h1>
+
+    <p>Ejercicio 6 - Programación Web Avanzada</p>
+
+    <div class="caja">
+
+        <h2 id="texto">¡Bienvenidos a nuestro proyecto!</h2>
+
+        <p>Desliza la barra para cambiar el tamaño del texto.</p>
+
+        <input
+            type="range"
+            id="slider"
+            min="16"
+            max="50"
+            value="24"
+        >
+
+        <p>Tamaño del texto:
+            <span id="valor">24</span> px
+        </p>
+
+    </div>
+
+    <a href="../index.html">Volver al inicio</a>
+
+    <script>
+        const slider = document.getElementById("slider");
+        const texto = document.getElementById("texto");
+        const valor = document.getElementById("valor");
+
+        slider.addEventListener("input", function() {
+            texto.style.fontSize = slider.value + "px";
+            valor.textContent = slider.value;
+        });
+    </script>
+
+</body>
+</html>

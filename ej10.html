@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio 10 - Página Web Completa</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient( lightblue 60%,#d45b91  );
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #f8bbd0;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            color: #a82d6d;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Menú de navegación */
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #a82d6d;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            background-color: #f8bbd0;
+        }
+
+        /* Distribución principal */
+        .contenedor {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        main {
+            min-width: 0;
+        }
+
+        h2 {
+            color: #d45b91;
+        }
+
+        /* Presentación */
+        .presentacion {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Tarjetas */
+        .integrantes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px #88888844;
+        }
+
+        .tarjeta h3 {
+            color: #d45b91;
+        }
+
+        .tarjeta p {
+            line-height: 1.6;
+        }
+
+        /* Barra lateral */
+        aside {
+            background-color: #fff0f6;
+            padding: 25px;
+            border-radius: 15px;
+            align-self: start;
+        }
+
+        aside h2 {
+            color: #a82d6d;
+        }
+
+        aside ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        aside a {
+            color: #a82d6d;
+        }
+
+        /* Sección de objetivos */
+        .objetivos {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #f8bbd0;
+            text-align: center;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        footer p {
+            color: #333333;
+        }
+
+        .volver {
+            display: inline-block;
+            background-color: white;
+            color: #a82d6d;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .volver:hover {
+            background-color: #ec80ad;
+            color: white;
+        }
+
+        /* Diseño para celulares */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+
+            .integrantes {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tarjeta {
+                padding: 20px;
+            }
+        }
+        html, body{
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header id="inicio">
+
+        <h1>Nuestro Equipo de Programación Web</h1>
+
+        <p>Universidad Bolivariana del Ecuador</p>
+
+        <p>Programación Web Avanzada</p>
+
+        <p>Ejercicio 10 - Página Web Completa</p>
+
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#equipo">Integrantes</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="contenedor">
+
+        <!-- Contenido principal -->
+        <main>
+
+            <section class="presentacion" id="nosotros">
+
+                <h2>¿Quiénes somos?</h2>
+
+                <p>
+                    Somos un grupo de cinco estudiantes
+                    de la Universidad Bolivariana del
+                    Ecuador que desarrollamos esta
+                    actividad para aplicar nuestros
+                    conocimientos de HTML y CSS.
+                </p>
+
+                <p>
+                    Mediante este proyecto practicamos
+                    la creación de páginas web,
+                    la organización de contenidos,
+                    el diseño visual y la navegación.
+                </p>
+
+            </section>
+
+            <h2 id="equipo">Nuestro Equipo</h2>
+
+            <section class="integrantes">
+
+                <article class="tarjeta">
+                    <h3>Jorge Villamar</h3>
+                    <p>
+                        Integrante del equipo de
+                        Programación Web Avanzada.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Norka Mideros</h3>
+                    <p>
+                        Integrante del equipo de
+                        Programación Web Avanzada.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Liseth Criollo</h3>
+                    <p>
+                        Integrante del equipo de
+                        Programación Web Avanzada.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Mauri Chinlle</h3>
+                    <p>
+                        Integrante del equipo de
+                        Programación Web Avanzada.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Bruce Balarezo</h3>
+                    <p>
+                        Integrante del equipo de
+                        Programación Web Avanzada.
+                    </p>
+                </article>
+
+            </section>
+
+            <!-- Objetivos -->
+            <section class="objetivos" id="objetivos">
+
+                <h2>Objetivos del Proyecto</h2>
+
+                <p>
+                    Nuestro objetivo es desarrollar
+                    habilidades en programación web
+                    mediante la aplicación de HTML
+                    y CSS.
+                </p>
+
+                <p>
+                    Buscamos comprender la estructura
+                    de una página web, aplicar estilos,
+                    crear menús de navegación y
+                    desarrollar diseños responsivos.
+                </p>
+
+            </section>
+
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+
+            <h2>Información del Proyecto</h2>
+
+            <p><strong>Asignatura:</strong></p>
+            <p>Programación Web Avanzada</p>
+
+            <p><strong>Universidad:</strong></p>
+            <p>Universidad Bolivariana del Ecuador</p>
+
+            <p><strong>Unidad:</strong></p>
+            <p>Fundamentos de Programación Web</p>
+
+            <p><strong>Integrantes:</strong> 5</p>
+
+            <h2>Ejercicios</h2>
+
+            <ul>
+                <li><a href="ej01.html">Ejercicio 1</a></li>
+                <li><a href="ej02.html">Ejercicio 2</a></li>
+                <li><a href="ej03.html">Ejercicio 3</a></li>
+                <li><a href="ej04.html">Ejercicio 4</a></li>
+                <li><a href="ej05.html">Ejercicio 5</a></li>
+                <li><a href="ej06.html">Ejercicio 6</a></li>
+                <li><a href="ej07.html">Ejercicio 7</a></li>
+                <li><a href="ej08.html">Ejercicio 8</a></li>
+                <li><a href="ej09.html">Ejercicio 9</a></li>
+                <li><a href="ej10.html">Ejercicio 10</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+
+        <h2>Trabajo Grupal</h2>
+
+        <p>
+            Jorge Villamar - Norka Mideros -
+            Liseth Criollo - Mauri Chinlle -
+            Bruce Balarezo
+        </p>
+
+        <p>
+            Universidad Bolivariana del Ecuador
+        </p>
+
+        <a class="volver" href="../index.html">
+            Volver al inicio
+        </a>
+
+    </footer>
+
+</body>
+</html>

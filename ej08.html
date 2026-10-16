@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio 8 - Diseño Responsivo</title>
+
+    <style>
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:linear-gradient( lightblue 60%,#d45b91  );
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #d45b91;
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #d45b91;
+            font-size: 24px;
+        }
+
+        p {
+            color: #333333;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        nav a {
+            background-color: #f8bbd0;
+            color: #333333;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ec80ad;
+            color: white;
+        }
+
+        nav a:active,
+        nav a:focus {
+            background-color: #b83280;
+            color: white;
+        }
+
+        /* Secciones de los integrantes */
+        .seccion {
+            background-color: white;
+            max-width: 750px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px #88888844;
+            scroll-margin-top: 20px;
+        }
+
+        /* Botón de regreso */
+        .volver {
+            display: inline-block;
+            background-color: #f8bbd0;
+            color: #333333;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .volver:hover {
+            background-color: #ec80ad;
+            color: white;
+        }
+
+        /* Diseño para computadoras */
+        @media screen and (min-width: 769px) {
+            nav {
+                flex-direction: row;
+            }
+
+            .seccion {
+                width: 80%;
+            }
+        }
+
+        /* Diseño para celulares y tablets */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px;
+            }
+
+            nav a {
+                display: block;
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            .seccion {
+                width: 100%;
+                margin: 15px auto;
+                padding: 15px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .volver {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+                html, body{
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biografía de Nuestro Grupo</h1>
+
+        <p>Ejercicio 8 - Diseño Responsivo</p>
+
+        <p>Programación Web Avanzada</p>
+
+        <p>Universidad Bolivariana del Ecuador</p>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav aria-label="Navegación principal">
+
+        <a href="#jorge">Jorge</a>
+
+        <a href="#norka">Norka</a>
+
+        <a href="#liseth">Liseth</a>
+
+        <a href="#mauri">Mauri</a>
+
+        <a href="#bruce">Bruce</a>
+
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Facebook
+        </a>
+
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <section class="seccion" id="jorge">
+            <h2>Jorge Villamar</h2>
+
+            <p>
+                Integrante del grupo de Programación
+                Web Avanzada de la Universidad
+                Bolivariana del Ecuador.
+            </p>
+        </section>
+
+        <section class="seccion" id="norka">
+            <h2>Norka Mideros</h2>
+
+            <p>
+                Integrante del grupo de Programación
+                Web Avanzada de la Universidad
+                Bolivariana del Ecuador.
+            </p>
+        </section>
+
+        <section class="seccion" id="liseth">
+            <h2>Liseth Criollo</h2>
+
+            <p>
+                Integrante del grupo de Programación
+                Web Avanzada de la Universidad
+                Bolivariana del Ecuador.
+            </p>
+        </section>
+
+        <section class="seccion" id="mauri">
+            <h2>Mauri Chinlle</h2>
+
+            <p>
+                Integrante del grupo de Programación
+                Web Avanzada de la Universidad
+                Bolivariana del Ecuador.
+            </p>
+        </section>
+
+        <section class="seccion" id="bruce">
+            <h2>Bruce Balarezo</h2>
+
+            <p>
+                Integrante del grupo de Programación
+                Web Avanzada de la Universidad
+                Bolivariana del Ecuador.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            Trabajo grupal - Programación Web Avanzada
+        </p>
+
+        <a class="volver" href="../index.html">
+            Volver al inicio
+        </a>
+
+    </footer>
+
+</body>
+</html>
